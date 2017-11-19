@@ -1,12 +1,10 @@
 package main;
 
-import java.util.ArrayList;
-
 public class InputObject implements Comparable<InputObject>{
 	private Object classType = null;
-	private ArrayList<?> fields = null;
+	private String[] fields = null;
 	
-	public InputObject(Object type, ArrayList<?> in) {
+	public InputObject(Object type, String... in) {
 		classType = type;
 		fields = in;
 	}
@@ -15,7 +13,7 @@ public class InputObject implements Comparable<InputObject>{
 		return classType;
 	}
 	
-	public ArrayList<?> getFields() {
+	public String[] getFields() {
 		return fields;
 	}
 	
