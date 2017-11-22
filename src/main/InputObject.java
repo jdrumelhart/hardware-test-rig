@@ -1,16 +1,18 @@
 package main;
 
+import main.Robot.HardwareType;
+
 public class InputObject implements Comparable<InputObject>{
-	private Object classType = null;
+	private HardwareType hardware = null;
 	private String[] fields = null;
 	
-	public InputObject(Object type, String... in) {
-		classType = type;
+	public InputObject(HardwareType type, String... in) {
+		hardware = type;
 		fields = in;
 	}
 	
-	public Object getClassType() {
-		return classType;
+	public HardwareType getHardwareType() {
+		return hardware;
 	}
 	
 	public String[] getFields() {
@@ -19,12 +21,11 @@ public class InputObject implements Comparable<InputObject>{
 	
 	@Override
 	public int compareTo(InputObject o) {
-		// TODO Auto-generated method stub
-		return 0;
+		return getHardwareType().compareTo(o.getHardwareType());
 	}
 	
 	@Override
 	public String toString() {
-		return classType.toString() + "/n" + fields.toString();
+		return hardware.toString() + "/n" + fields.toString();
 	}
 }

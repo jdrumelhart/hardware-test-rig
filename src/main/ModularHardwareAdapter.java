@@ -2,6 +2,8 @@ package main;
 
 import com.ctre.MotorControl.CANTalon;
 
+import main.Robot.HardwareType;
+
 public class ModularHardwareAdapter {
 	public ModularHardwareAdapter(InputObject... input) {
 		for(InputObject i: input) {
@@ -10,6 +12,6 @@ public class ModularHardwareAdapter {
 	}
 	
 	private void createHardware(InputObject input) {
-		Object oType = input.getClassType();
+		HardwareType oType = input.getHardwareType();
 	}
 }
