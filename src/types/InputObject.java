@@ -2,8 +2,8 @@ package types;
 
 
 public abstract class InputObject implements Comparable<InputObject>{
-	private Object hardwareType;
-	private Object[] fields;
+	protected Object hardwareType;
+	protected Object[] fields;
 	
 	public abstract Object getHardwareType();
 	

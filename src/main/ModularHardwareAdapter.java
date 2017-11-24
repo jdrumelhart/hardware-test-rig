@@ -1,8 +1,5 @@
 package main;
 
-import com.ctre.MotorControl.CANTalon;
-
-import edu.wpi.first.wpilibj.Encoder;
 import types.InputObject;
 
 public class ModularHardwareAdapter {
