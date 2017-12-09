@@ -1,16 +1,24 @@
 package main;
 
-import types.InputObject;
+import edu.wpi.first.wpilibj.Encoder;
 
 public class ModularHardwareAdapter {
 	
-	public ModularHardwareAdapter(InputObject... input) {
-		for(InputObject i: input) {
+	public ModularHardwareAdapter(Class<?>... input) {
+		for(Class<?> i: input) {
 			createHardware(i);
 		}
 	}
 	
-	private void createHardware(InputObject input) {
-	
+	private void createHardware(Class<?> input) {
+		if(input.isInstance(new Encoder(0, 0))) {
+			try {
+				Class<?> cls = Class.forName("Encoder");
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 	}
 }
